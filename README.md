@@ -1,7 +1,7 @@
 # SOEN-321 Project: Jailbreak LLMs Project
 
 ## Purpose  
-This project is focused on developing tools and methods to detect and analyze attempts to jailbreak Large Language Models (LLMs). By identifying patterns and techniques used in jailbreak attempts, we aim to enhance the security and reliability of LLMs, ensuring they adhere to ethical and operational constraints.
+This project is focused on developing tools and methods to detect and analyze attempts to jailbreak Large Language Models (LLMs). By identifying patterns and techniques used in jailbreak attempts, we aim to enhance the security and reliability of LLMs, ensuring they adhere to ethical and operational constraints and produce a final report that discusses in depth about the usage of jailbreaks for LLMs, what exploits are legitimate and what it entails towards the usage of AI in everyday use such as commercial chatbots.
 
 ## Features  
 - Detection of prompt engineering techniques used to bypass restrictions.  
@@ -13,7 +13,9 @@ Due to the nature of this project, jailbreaking LLMs can lead to the generation 
 - Strong or offensive language.  
 - Slurs or discriminatory remarks.  
 - Descriptions of violent behaviors or dangerous activities.  
-- Harmful instructions, such as dangerous recipes or actions.  
+- Harmful instructions, such as dangerous recipes or actions.
+
+Please use at your discretion. All purposes and techniques fall under the preface of educational purposes under Concordia University and should NOT be done for personal use.
 
 ## Installation  
 Follow these steps to set up the project environment. The recommended Python version is 3.11.0 or above.
@@ -27,7 +29,11 @@ Follow these steps to set up the project environment. The recommended Python ver
     pip install -r requirements.txt
     ```
 3. Create a .env file to store your LLM API keys. Add the following line, replacing {your_API_KEY} with your actual API key:
-    `GEMINI_KEY={your_API_KEY}`
+    ```bash
+    GEMINI_KEY={your_API_KEY}`
+    ```
+
+    For Gemini, feel free to use the following link to generate your own API key: https://ai.google.dev/gemini-api/docs/api-key
 
 ## Team Members:
 
