@@ -28,12 +28,15 @@ Follow these steps to set up the project environment. The recommended Python ver
     ```bash
     pip install -r requirements.txt
     ```
-3. Create a .env file to store your LLM API keys. Add the following line, replacing {your_API_KEY} with your actual API key:
+3. Create a .env file at the root of the project to store your LLM API keys. 
+Add the following line, replacing {your_API_KEY} with your actual API key:
     ```bash
-    GEMINI_KEY={your_API_KEY}`
+    GEMINI_KEY={your_API_KEY}
+    OPENAI_API_KEY={your_API_KEY}
     ```
 
-    For Gemini, feel free to use the following link to generate your own API key: https://ai.google.dev/gemini-api/docs/api-key
+    * For **Gemini**, feel free to use the following link to generate your own API key: https://ai.google.dev/gemini-api/docs/api-key  
+    * For **ChatGPT**, use the following link to generate an API key: https://platform.openai.com/api-keys
 
 ## Team Members:
 
