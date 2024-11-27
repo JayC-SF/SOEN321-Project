@@ -15,16 +15,20 @@ class GeminiChat:
                 "parts": [ { "text": prompt } ] 
             }
         )
-        # request to gemini
+        # request to gemini'
+        jsonPayload = {
+            "contents": self.__history,
+        }
+        # add seed if exists
+        if seed != None:
+            jsonPayload['generationConfig'] = {
+                    "seed": seed                
+            }
+        
         res = requests.post(
             self.__url, 
             params={"key":self.__key}, 
-            json={
-                "contents": self.__history,
-                "generationConfig": {
-                    "seed": seed
-                }
-            }
+            json=jsonPayload
         )
         response = res.json()
         # extend the chat history
@@ -32,7 +36,7 @@ class GeminiChat:
         self.__history.append(model_response)
         return model_response['parts'][0]['text']
 
-    def chatAndDisplay(self, prompt: str, seed:int | None):
+    def chatAndDisplay(self, prompt: str, seed:int | None = None):
         answer = self.chat(prompt, seed)
         display(Markdown(answer))
         
