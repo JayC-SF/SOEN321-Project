@@ -22,9 +22,8 @@ class GeminiChat:
         # add seed if exists
         if seed != None:
             jsonPayload['generationConfig'] = {
-                    "seed": seed                
+                "seed": seed                
             }
-        
         res = requests.post(
             self.__url, 
             params={"key":self.__key}, 
