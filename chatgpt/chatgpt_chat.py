@@ -15,7 +15,8 @@ class ChatGPT:
         response = self.__client.chat.completions.create(
             model=self.__model,
             messages=self.__messages,
-            seed=seed
+            seed=seed,
+            temperature=0
         )
         answer = response.choices[0].message.content
         self.__messages.append({"role": "assistant", "content": answer})
