@@ -32,7 +32,6 @@ Follow these steps to set up the project environment. The recommended Python ver
 Add the following line, replacing {your_API_KEY} with your actual API key:
     ```bash
     GEMINI_KEY={your_API_KEY}
-    OPENAI_API_KEY={your_API_KEY}
     ```
 
     * For **Gemini**, feel free to use the following link to generate your own API key: https://ai.google.dev/gemini-api/docs/api-key  
