@@ -35,7 +35,6 @@ Add the following line, replacing {your_API_KEY} with your actual API key:
     ```
 
     * For **Gemini**, feel free to use the following link to generate your own API key: https://ai.google.dev/gemini-api/docs/api-key  
-    * For **ChatGPT**, use the following link to generate an API key: https://platform.openai.com/api-keys
 
 ## Team Members:
 
