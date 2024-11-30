@@ -15,6 +15,9 @@ class GeminiChat:
                 "parts": [ { "text": prompt } ] 
             }
         )
+        return self.send(seed)
+    
+    def send(self, seed: int | None = None):
         # request to gemini'
         jsonPayload = {
             "contents": self.__history,
@@ -34,7 +37,14 @@ class GeminiChat:
         model_response = response['candidates'][0]['content']
         self.__history.append(model_response)
         return model_response['parts'][0]['text']
+    
+    def sendAndDisplay(self, seed: int | None = None):
+        answer = self.send(seed)
+        display(Markdown(answer))
 
+    def editRecentResponse(self, text: str):
+        self.__history[-1]['parts'][0]['text'] = text
+    
     def chatAndDisplay(self, prompt: str, seed:int | None = None):
         answer = self.chat(prompt, seed)
         display(Markdown(answer))
